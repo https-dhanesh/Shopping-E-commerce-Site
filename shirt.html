@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AK - Shirts</title>
+        <link rel="stylesheet" href="addtocart.css">
+        <link rel="stylesheet" href="shop.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="logo.png" alt="logo" class="logo"/>
+            <div>
+                <ul id="navbar">
+                    <li><a href="#" onclick="funindex()">Home</a></li>
+        <li><a href="#" class="active" id="shop" onclick="funshop()">Shop</a></li>
+        <li><a href="#" id="about" onclick="funabout()">About</a></li>
+        <li><a href="#" id="contact" onclick="funcontact()">Contact</a></li>       
+        <li><a href="#" id="signin" onclick="funsignin()">Sign In</a></li>
+                    <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p><b>My Cart</b></p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">₹0.00</h2>
+                </div>
+                <button style="height:50px; width:150px; color: white;" id="buyButton"> Buy Now</button>
+                <div id="purchasePage" style="display: none;">
+                    <br><br> <h2>Enter your Details</h2><br>
+                     <form action="checkout_process.php" method="post">
+                        <table>
+                         <tr>
+                             <td><label for="name">Name:</label></td>
+                             <td><input type="text" id="name" name="name" required><br></td>
+                         </tr>
+                         <tr>
+                             <td>     <label for="mbnum">Mobile No:</label></td>
+                             <td><input type="text" id="name" name="name" required><br></td>
+                         </tr>
+                         <tr>
+                             <td>      <label for="email">Email:</label></td>
+                             <td>  <input type="email" id="email" name="email" required><br></td>
+                         </tr>
+                         <tr>
+                            <td>      <label for="address">Address:</label></td>
+                            <td>  <input type="email" id="email" name="text" required><br></td>
+                        </tr>
+                        </table>
+                        <br> <button type="submit" style="height:40px; width:190px; color: white;" id="buyButton" onclick="buy()">Confirm Purchase</button>
+                     </form>
+                 </div>
+            </div>
+        </div>
+        <footer class="section-p1">
+            <div class="copyright">
+               <p>@2023, @aditya @dhanesh @saksham @sarvesh</p>
+            </div>
+        </footer>
+        <script src="shirt.js"></script>
+    </body>
+</html>
